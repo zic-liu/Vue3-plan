@@ -1,5 +1,13 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+// 自定义指令
+import * as directive from "./directive";
+Object.keys(directive).forEach((key) => {
+  app.directive(key, directive[key]);
+});
+
+app.mount("#app");
