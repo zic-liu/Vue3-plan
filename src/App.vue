@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
+import Directives from "./view/plan/Directives.vue";
 </script>
 
 <template>
-  <HelloWorld />
+  <HelloWorld msg="vite + vue3" />
+  <Directives />
 </template>
 
 <style scoped>
